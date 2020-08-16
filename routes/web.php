@@ -19,7 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::any('/home', 'HomeController@index')->name('home');
+Route::any('/deletelista/{id}', 'HomeController@deletarLista');
 
 Route::get('/form', 'HomeController@form');
 
